@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0ruar5bhgln"]
+
+[ext_resource type="Script" uid="uid://d2ld6k5o74xc8" path="res://Scripts/player.gd" id="1_1iada"]
+[ext_resource type="Texture2D" uid="uid://bc2rpomv5s4sr" path="res://icon.svg" id="1_xhfnw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kpjcp"]
+radius = 31.257
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gntrk"]
+radius = 11.1803
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_1iada")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_xhfnw")
+
+[node name="Colision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_kpjcp")
+
+[node name="IntArea" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IntArea"]
+shape = SubResource("CircleShape2D_gntrk")
+debug_color = Color(0.998761, 0, 0.133327, 0.42)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true

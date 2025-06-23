@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://clnms1okm4epx"]
+
+[ext_resource type="Script" uid="uid://c5othi20qcyvy" path="res://totem.gd" id="1_7r4rh"]
+[ext_resource type="Texture2D" uid="uid://dgmyu6iuk6upj" path="res://White Square.png" id="2_os04m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ymark"]
+radius = 142.088
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjivp"]
+size = Vector2(94, 94)
+
+[node name="Totem" type="Node2D"]
+script = ExtResource("1_7r4rh")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ymark")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("RectangleShape2D_cjivp")
+
+[node name="WhiteSquare" type="Sprite2D" parent="."]
+modulate = Color(1, 0.783333, 0, 1)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_os04m")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

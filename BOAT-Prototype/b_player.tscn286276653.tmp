@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://caogjt86juwxt"]
+
+[ext_resource type="Texture2D" uid="uid://bc2rpomv5s4sr" path="res://icon.svg" id="1_djxel"]
+[ext_resource type="Script" uid="uid://c8ubmilnpbhpj" path="res://b_player.gd" id="1_jl4rr"]
+
+[node name="B_Player" type="CharacterBody2D"]
+script = ExtResource("1_jl4rr")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 1)
+texture = ExtResource("1_djxel")
+
+[node name="Mark" type="Marker2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(-1, -1)
+
+[node name="Icon2" type="Sprite2D" parent="Mark"]
+modulate = Color(1, 0.0588235, 0, 1)
+position = Vector2(0, 41.625)
+rotation = 3.14159
+scale = Vector2(0.01, 0.605)
+texture = ExtResource("1_djxel")
