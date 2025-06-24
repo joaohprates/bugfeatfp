@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddghqq0qp5h1q"]
+[gd_scene load_steps=7 format=3 uid="uid://ddghqq0qp5h1q"]
 
 [ext_resource type="Script" uid="uid://crmrpwc1e8uen" path="res://TelaInicial.gd" id="1_84x8i"]
 [ext_resource type="StyleBox" uid="uid://dyq5s02mykhdw" path="res://UI/Button.tres" id="2_pwxgj"]
@@ -10,6 +10,30 @@ outline_color = Color(0, 0, 0, 1)
 shadow_size = 10
 shadow_color = Color(0, 0, 0, 0.298039)
 shadow_offset = Vector2(10, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_84x8i"]
+bg_color = Color(0, 1, 0.116667, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pwxgj"]
+bg_color = Color(0.966667, 1, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 
 [sub_resource type="LabelSettings" id="LabelSettings_qhp4a"]
 font_size = 36
@@ -76,9 +100,9 @@ theme_override_styles/hover_pressed = ExtResource("2_pwxgj")
 theme_override_styles/hover_mirrored = ExtResource("2_pwxgj")
 theme_override_styles/hover = ExtResource("2_pwxgj")
 theme_override_styles/pressed_mirrored = ExtResource("2_pwxgj")
-theme_override_styles/pressed = ExtResource("2_pwxgj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_84x8i")
 theme_override_styles/normal_mirrored = ExtResource("2_pwxgj")
-theme_override_styles/normal = ExtResource("2_pwxgj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pwxgj")
 
 [node name="Label" type="Label" parent="MarginContainer/Button"]
 layout_mode = 1
