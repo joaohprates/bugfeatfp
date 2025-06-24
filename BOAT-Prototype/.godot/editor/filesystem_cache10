@@ -1,0 +1,21 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1750791651
+icon.svg::CompressedTexture2D/CompressedTexture2D::2583596300973913721::1750697266::1750697334::1::::<><><>0<>0<>3c94d1f6be6bfa34f1458cab9111e5c5<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+totem.gd::GDScript/GDScript::6908574551557802034::1750697266::0::1::::<>Interactable<><>0<>0<><>::
+White Square.png::CompressedTexture2D/CompressedTexture2D::7606662211166311535::1750697266::1750697334::1::::<><><>0<>0<>c114416a1f6e5db93c8a84f1d7bf206a<>res://.godot/imported/White Square.png-86856dadfe4fac3fd8f29014bba8e666.ctex::
+::res://Entities/::1750791627
+b_player.tscn::PackedScene/PackedScene::4802124080388317769::1750697266::0::1::::<><><>0<>0<><>::uid://bc2rpomv5s4sr::::res://icon.svg<>uid://c8ubmilnpbhpj::::res://Scripts/b_player.gd
+exp.gd::GDScript/GDScript::4128090467951292456::1750697266::0::1::::<>Node2D<><>0<>0<><>::
+exp.tscn::PackedScene/PackedScene::1464471023509426313::1750697266::0::1::::<><><>0<>0<><>::uid://dgmyu6iuk6upj::::res://White Square.png<>uid://by2xbug151dx5::::res://Entities/exp.gd
+Player.tscn::PackedScene::122866219871011171::1750791627::0::1::::<><><>0<>0<><>::uid://d2ld6k5o74xc8::::res://Scripts/player.gd<>uid://bc2rpomv5s4sr::::res://icon.svg
+totem.tscn::PackedScene/PackedScene::5572517694116721933::1750697266::0::1::::<><><>0<>0<><>::uid://c5othi20qcyvy::::res://totem.gd<>uid://dgmyu6iuk6upj::::res://White Square.png
+::res://Scenes/::1750791626
+Room.tscn::PackedScene::7204147785495096019::1750791626::0::1::::<><><>0<>0<><>::uid://b0ruar5bhgln::::res://Entities/Player.tscn<>uid://clnms1okm4epx::::res://Entities/totem.tscn
+Sea.tscn::PackedScene/PackedScene::468387409173281310::1750697266::0::1::::<><><>0<>0<><>::uid://bc2rpomv5s4sr::::res://icon.svg<>uid://caogjt86juwxt::::res://Entities/b_player.tscn
+::res://Scripts/::1750791626
+b_player.gd::GDScript/GDScript::7130443346832494715::1750697266::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Global.gd::GDScript::4262985192933463171::1750791626::0::1::::<>Node<><>0<>0<><>::
+Interactable.gd::GDScript/GDScript::5815653317456789392::1750697266::0::1::::Interactable<>Node2D<><>0<>0<><>::
+player.gd::GDScript::9077307067447845353::1750791626::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://UI/::1750791646
+Expedition.tscn::PackedScene::7583808703366939336::1750791646::0::1::::<><><>0<>0<><>::

@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var HUD = get_node("CanvasLayer")
+@onready var UI = get_node("CanvasLayer/UI")
 @export var mspeed = 400
 var speed = 0
 var dir = Vector2.ZERO
@@ -10,6 +11,7 @@ var active = true
 
 func _ready() -> void:
 	Global.player = self
+	Global.Tela_Player = UI
 func _physics_process(delta: float) -> void:
 	if active:
 		move(delta)

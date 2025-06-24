@@ -11,13 +11,17 @@ config_version=5
 [application]
 
 config/name="BOAT-Prototype"
-run/main_scene="uid://dav0i5jr0o2tb"
+run/main_scene="uid://ddghqq0qp5h1q"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://Scripts/Global.gd"
+
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
 
 [input]
 

@@ -1,0 +1,103 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddghqq0qp5h1q"]
+
+[ext_resource type="Script" uid="uid://crmrpwc1e8uen" path="res://TelaInicial.gd" id="1_84x8i"]
+[ext_resource type="StyleBox" uid="uid://dyq5s02mykhdw" path="res://UI/Button.tres" id="2_pwxgj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bodlx"]
+font_size = 86
+outline_size = 25
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 0.298039)
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qhp4a"]
+font_size = 36
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_84x8i")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.42, 0.845333, 1, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -335.5
+offset_top = -60.0208
+offset_right = 335.5
+offset_bottom = 60.0208
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 86
+text = "JOGO DE BARCO"
+label_settings = SubResource("LabelSettings_bodlx")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="Button" type="Button" parent="MarginContainer"]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_styles/focus = ExtResource("2_pwxgj")
+theme_override_styles/disabled_mirrored = ExtResource("2_pwxgj")
+theme_override_styles/disabled = ExtResource("2_pwxgj")
+theme_override_styles/hover_pressed_mirrored = ExtResource("2_pwxgj")
+theme_override_styles/hover_pressed = ExtResource("2_pwxgj")
+theme_override_styles/hover_mirrored = ExtResource("2_pwxgj")
+theme_override_styles/hover = ExtResource("2_pwxgj")
+theme_override_styles/pressed_mirrored = ExtResource("2_pwxgj")
+theme_override_styles/pressed = ExtResource("2_pwxgj")
+theme_override_styles/normal_mirrored = ExtResource("2_pwxgj")
+theme_override_styles/normal = ExtResource("2_pwxgj")
+
+[node name="Label" type="Label" parent="MarginContainer/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -51.5
+offset_right = 57.0
+offset_bottom = 105.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "JOGAR
+"
+label_settings = SubResource("LabelSettings_qhp4a")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[connection signal="pressed" from="MarginContainer/Button" to="." method="_on_button_pressed"]

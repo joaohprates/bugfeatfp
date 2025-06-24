@@ -1,0 +1,12 @@
+res://UI/Expedition.tscn
+res://Scenes/Room.tscn
+res://Entities/Player.tscn
+res://UI/Button.tres
+res://UI/expedition.gd
+res://Scripts/Global.gd
+res://Load_Screen.gd
+res://UI/Load_Screen.tscn
+res://totem.gd
+res://Entities/totem.tscn
+res://TelaInicial.gd
+res://Scenes/Tela_Inicial.tscn
