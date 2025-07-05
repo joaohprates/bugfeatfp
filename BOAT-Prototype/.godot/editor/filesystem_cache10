@@ -1,0 +1,35 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1751684338
+icon.svg::CompressedTexture2D/CompressedTexture2D::2583596300973913721::1750804920::1750804920::1::::<><><>0<>0<>3c94d1f6be6bfa34f1458cab9111e5c5<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+Load_Screen.gd::GDScript/GDScript::933526191559316391::1750804920::0::1::::<>Control<><>0<>0<><>::
+TelaInicial.gd::GDScript/GDScript::5991884377858371949::1750866831::0::1::::<>Control<><>0<>0<><>::
+totem.gd::GDScript/GDScript::6908574551557802034::1750804920::0::1::::<>Interactable<><>0<>0<><>::
+White Square.png::CompressedTexture2D/CompressedTexture2D::7606662211166311535::1750804920::1750804920::1::::<><><>0<>0<>c114416a1f6e5db93c8a84f1d7bf206a<>res://.godot/imported/White Square.png-86856dadfe4fac3fd8f29014bba8e666.ctex::
+::res://Entities/::1751684594
+b_player.tscn::PackedScene::4802124080388317769::1751683679::0::1::::<><><>0<>0<><>::uid://c8ubmilnpbhpj::::res://Scripts/b_player.gd<>uid://bewd04o8x5u5l::::res://Images/barco.png
+exp.gd::GDScript/GDScript::4128090467951292456::1750804920::0::1::::<>Node2D<><>0<>0<><>::
+exp.tscn::PackedScene/PackedScene::1464471023509426313::1750804920::0::1::::<><><>0<>0<><>::uid://dgmyu6iuk6upj::::res://White Square.png<>uid://by2xbug151dx5::::res://Entities/exp.gd
+Player.tscn::PackedScene::122866219871011171::1751684594::0::1::::<><><>0<>0<><>::uid://d2ld6k5o74xc8::::res://Scripts/player.gd<>uid://bsmv2jelfcly5::::res://Images/Modelo Personagem padrao.png
+totem.tscn::PackedScene::5572517694116721933::1751683679::0::1::::<><><>0<>0<><>::uid://c5othi20qcyvy::::res://totem.gd<>uid://dgmyu6iuk6upj::::res://White Square.png
+::res://Images/::1751684267
+barco.png::CompressedTexture2D/CompressedTexture2D::2712820710996191447::1751333740::1751333756::1::::<><><>0<>0<>fd35027b1dd988548ec16f6b3492fbaf<>res://.godot/imported/barco.png-f3eff1e5e42abdf6dd34a49452db0b2d.ctex::
+Modelo Personagem padrao.png::CompressedTexture2D::3675916154905861690::1751684238::1751684267::1::::<><><>0<>0<>f3c810fa7cd7f0ab29cac4958b336a7e<>res://.godot/imported/Modelo Personagem padrao.png-7889346df18c06988efb2e30029c3cf1.ctex::
+::res://Images/terrain/::1751684662
+Spritesheet SE PA RA DO.png::CompressedTexture2D::1102520802684074174::1751684611::1751684665::1::::<><><>0<>0<>3e245ecf626f4ecd1d0b63a089d69f57<>res://.godot/imported/Spritesheet SE PA RA DO.png-7825622efc6d6c2ea0760aa1707ee0e2.ctex::
+::res://Scenes/::1751683679
+terrain.gd::GDScript::3293993701901247888::1751676589::0::1::::terrain<>Node2D<><>0<>0<><>::
+Terrain.tscn::PackedScene::827561208519709149::1751683679::0::1::::<><><>0<>0<><>::uid://bm6vuh3lx528c::::res://Scenes/terrain.gd<>uid://bcfgfqsdd6v5k::::res://Images/terrain/areiaBordas.png<>uid://cmxrv0gbonkob::::res://Images/terrain/areiaSpritesheet.png
+Room.tscn::PackedScene::7204147785495096019::1751683678::0::1::::<><><>0<>0<><>::uid://b0ruar5bhgln::::res://Entities/Player.tscn<>uid://clnms1okm4epx::::res://Entities/totem.tscn<>uid://l142u5s52m26::::res://Scenes/Terrain.tscn
+Sea.tscn::PackedScene::468387409173281310::1751683679::0::1::::<><><>0<>0<><>::uid://bc2rpomv5s4sr::::res://icon.svg<>uid://caogjt86juwxt::::res://Entities/b_player.tscn<>res://Images/areiaSpritesheet.png
+Tela_Inicial.tscn::PackedScene::7382669319911515200::1751683679::0::1::::<><><>0<>0<><>::uid://crmrpwc1e8uen::::res://TelaInicial.gd<>uid://dyq5s02mykhdw::::res://UI/Button.tres
+::res://Scripts/::1751341701
+b_player.gd::GDScript/GDScript::7130443346832494715::1751334988::0::1::::<>CharacterBody2D<><>0<>0<><>::
+canhao.gd::GDScript/GDScript::6936127810834302436::1751341701::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Global.gd::GDScript/GDScript::4262985192933463171::1750804920::0::1::::<>Node<><>0<>0<><>::
+Interactable.gd::GDScript/GDScript::5815653317456789392::1750804920::0::1::::Interactable<>Node2D<><>0<>0<><>::
+player.gd::GDScript/GDScript::9077307067447845353::1750804920::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://UI/::1751683679
+Button.tres::StyleBoxFlat::8878679351901490088::1751675634::0::1::::<><><>0<>0<><>::
+expedition.gd::GDScript/GDScript::6986566380169789297::1750804920::0::1::::<>Control<><>0<>0<><>::
+Expedition.tscn::PackedScene::7583808703366939336::1751683679::0::1::::<><><>0<>0<><>::uid://c6sly0a5h5hyf::::res://UI/expedition.gd
+Load_Screen.tscn::PackedScene::1563095926389577419::1751683679::0::1::::<><><>0<>0<><>::uid://nkhbmhtr5vul::::res://Load_Screen.gd

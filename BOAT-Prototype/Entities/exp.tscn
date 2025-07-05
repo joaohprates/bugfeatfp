@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://u4nvhdwehmkn"]
+
+[ext_resource type="Texture2D" uid="uid://dgmyu6iuk6upj" path="res://White Square.png" id="1_2v72f"]
+[ext_resource type="Script" uid="uid://by2xbug151dx5" path="res://Entities/exp.gd" id="1_qis1p"]
+
+[node name="Exp" type="Node2D"]
+script = ExtResource("1_qis1p")
+
+[node name="WhiteSquare" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_2v72f")
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = -50.0
+offset_top = -16.0
+offset_right = 52.0
+offset_bottom = 15.0
+flat = true
+
+[node name="WhiteSquare2" type="Sprite2D" parent="Button"]
+modulate = Color(0.633333, 1, 0, 1)
+position = Vector2(50, 16)
+rotation = 3.14159
+scale = Vector2(0.77, -0.2)
+texture = ExtResource("1_2v72f")
+
+[node name="Label" type="Label" parent="Button"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = -11.5
+offset_right = 47.0
+offset_bottom = 13.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "EXPEDITION"

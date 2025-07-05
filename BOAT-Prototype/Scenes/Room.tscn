@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dav0i5jr0o2tb"]
+
+[ext_resource type="PackedScene" uid="uid://b0ruar5bhgln" path="res://Entities/Player.tscn" id="1_nn86p"]
+[ext_resource type="PackedScene" uid="uid://clnms1okm4epx" path="res://Entities/totem.tscn" id="2_uj218"]
+[ext_resource type="PackedScene" uid="uid://l142u5s52m26" path="res://Scenes/Terrain.tscn" id="3_uj218"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Totem" parent="." instance=ExtResource("2_uj218")]
+z_index = 1
+position = Vector2(364, 344)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_nn86p")]
+z_index = 1
+position = Vector2(408, 286)
+
+[node name="Terrain" parent="." instance=ExtResource("3_uj218")]
+position = Vector2(339, 226)

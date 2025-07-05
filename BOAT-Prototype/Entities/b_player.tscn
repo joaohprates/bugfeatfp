@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://caogjt86juwxt"]
+
+[ext_resource type="Script" uid="uid://c8ubmilnpbhpj" path="res://Scripts/b_player.gd" id="1_jl4rr"]
+[ext_resource type="Texture2D" uid="uid://bewd04o8x5u5l" path="res://Images/barco.png" id="2_gur1r"]
+
+[node name="B_Player" type="CharacterBody2D"]
+script = ExtResource("1_jl4rr")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+rotation = 1.5708
+scale = Vector2(0.382122, 0.392441)
+texture = ExtResource("2_gur1r")
+
+[node name="Mark" type="Marker2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(-1, -1)
+
+[node name="Icon2" type="Sprite2D" parent="Mark"]
+position = Vector2(0, 41.625)
+rotation = 3.14159
+scale = Vector2(0.01, 0.605)
+
+[node name="Camera2D" type="Camera2D" parent="."]

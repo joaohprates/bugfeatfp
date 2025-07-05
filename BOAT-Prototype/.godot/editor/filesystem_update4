@@ -1,0 +1,15 @@
+res://UI/Button.tres
+res://Scenes/Room.tscn
+res://Scenes/terrain.gd
+res://Scenes/Terrain.tscn
+res://Entities/Player.tscn
+res://UI/Expedition.tscn
+res://UI/Load_Screen.tscn
+res://Entities/totem.tscn
+res://Scenes/Tela_Inicial.tscn
+res://Scenes/Sea.tscn
+res://Entities/b_player.tscn
+res://Scripts/b_player.gd
+res://Scripts/player.gd
+res://TelaInicial.gd
+res://totem.gd
