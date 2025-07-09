@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=3 uid="uid://43hmgyj0lyfn"]
+
+[ext_resource type="Script" uid="uid://b8o0877ckxmpm" path="res://Scenes/pause.gd" id="1_l2mpd"]
+[ext_resource type="Theme" uid="uid://dmcbx8wot5aax" path="res://Assets/button theme/new_theme.tres" id="1_o80xk"]
+[ext_resource type="Texture2D" uid="uid://ei8vf2iojgdd" path="res://Assets/pause_menu/Animation pause/tile000.png" id="3_nsogc"]
+[ext_resource type="Texture2D" uid="uid://cp4iuv0a2jcef" path="res://Assets/pause_menu/Animation pause/tile001.png" id="4_0pswh"]
+[ext_resource type="Texture2D" uid="uid://bhnrlxxqr6k4e" path="res://Assets/pause_menu/Animation pause/tile002.png" id="5_54e2h"]
+[ext_resource type="Texture2D" uid="uid://3ekc07bmvdsu" path="res://Assets/pause_menu/Animation pause/tile003.png" id="6_vfiib"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_nsogc"]
+resource_local_to_scene = true
+frames = 4
+frame_0/texture = ExtResource("3_nsogc")
+frame_0/duration = 0.3
+frame_1/texture = ExtResource("4_0pswh")
+frame_1/duration = 0.2
+frame_2/texture = ExtResource("5_54e2h")
+frame_2/duration = 0.1
+frame_3/texture = ExtResource("6_vfiib")
+frame_3/duration = 0.2
+
+[node name="Pause" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_l2mpd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.7613, 16.1736)
+color = Color(0, 0, 0, 0.537255)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="voltar" type="Button" parent="."]
+offset_top = 321.0
+offset_right = 1152.0
+offset_bottom = 366.0
+theme = ExtResource("1_o80xk")
+text = "Voltar"
+
+[node name="sair" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -577.0
+offset_top = 77.0
+offset_right = 575.0
+offset_bottom = 122.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_o80xk")
+text = "Sair"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 431.0
+offset_top = 17.0
+offset_right = 724.0
+offset_bottom = 319.0
+texture = SubResource("AnimatedTexture_nsogc")
+
+[connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="sair" to="." method="_on_sair_pressed"]

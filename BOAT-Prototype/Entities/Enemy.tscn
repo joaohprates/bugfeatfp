@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2ryntygpwkeo"]
+
+[ext_resource type="Script" uid="uid://drivp53kikvgn" path="res://Enemy.gd" id="1_v5eek"]
+[ext_resource type="Texture2D" uid="uid://bc2rpomv5s4sr" path="res://icon.svg" id="2_s5jqb"]
+[ext_resource type="Shape2D" uid="uid://dfoxk0okaflqk" path="res://Entities/Hitbox_Barco.tres" id="3_s5jqb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1jwd2"]
+radius = 300.107
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v5eek"]
+radius = 300.0
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_v5eek")
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+scale = Vector2(1, 2)
+texture = ExtResource("2_s5jqb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("3_s5jqb")
+
+[node name="Detec_Area" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detec_Area"]
+shape = SubResource("CircleShape2D_1jwd2")
+debug_color = Color(0.633519, 0.528062, 1.92523e-07, 0.42)
+
+[node name="Helm" type="Marker2D" parent="."]
+scale = Vector2(-1, -1)
+
+[node name="Icon2" type="Sprite2D" parent="Helm"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, 41.625)
+rotation = 3.14159
+scale = Vector2(0.01, 0.605)
+texture = ExtResource("2_s5jqb")
+
+[node name="Mark" type="Marker2D" parent="."]
+position = Vector2(0, -1)
+
+[node name="Combat_Zone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Combat_Zone"]
+shape = SubResource("CircleShape2D_v5eek")
+debug_color = Color(0.879525, 0.000370607, 0.824685, 0.42)
+
+[connection signal="area_entered" from="Detec_Area" to="." method="_on_detec_area_area_entered"]

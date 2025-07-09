@@ -2,12 +2,11 @@ extends CharacterBody2D
 
 @onready var HUD = get_node("CanvasLayer")
 @onready var UI = get_node("CanvasLayer/UI")
-@export var mspeed = 400
+@export var mspeed = 100
 var speed = 0
 var dir = Vector2.ZERO
 var accel = 1750
 var active = true
-
 
 func _ready() -> void:
 	Global.player = self

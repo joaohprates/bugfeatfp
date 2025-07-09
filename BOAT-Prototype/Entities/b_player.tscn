@@ -1,25 +1,48 @@
-[gd_scene load_steps=3 format=3 uid="uid://caogjt86juwxt"]
+[gd_scene load_steps=5 format=3 uid="uid://caogjt86juwxt"]
 
-[ext_resource type="Texture2D" uid="uid://bc2rpomv5s4sr" path="res://icon.svg" id="1_djxel"]
 [ext_resource type="Script" uid="uid://c8ubmilnpbhpj" path="res://Scripts/b_player.gd" id="1_jl4rr"]
+[ext_resource type="Texture2D" uid="uid://bewd04o8x5u5l" path="res://Assets/barco.png" id="2_gur1r"]
+[ext_resource type="Texture2D" uid="uid://dgmyu6iuk6upj" path="res://White Square.png" id="3_gur1r"]
+[ext_resource type="Shape2D" uid="uid://dfoxk0okaflqk" path="res://Entities/Hitbox_Barco.tres" id="4_n4l4i"]
 
 [node name="B_Player" type="CharacterBody2D"]
 script = ExtResource("1_jl4rr")
 
 [node name="Icon" type="Sprite2D" parent="."]
-modulate = Color(1, 0.7, 0, 1)
-scale = Vector2(0.5, 1)
-texture = ExtResource("1_djxel")
+position = Vector2(-1, 0)
+rotation = 1.5708
+scale = Vector2(0.382122, 0.392441)
+texture = ExtResource("2_gur1r")
 
-[node name="Mark" type="Marker2D" parent="."]
+[node name="Helm" type="Marker2D" parent="."]
 position = Vector2(0, -1)
 scale = Vector2(-1, -1)
 
-[node name="Icon2" type="Sprite2D" parent="Mark"]
-modulate = Color(1, 0.0588235, 0, 1)
+[node name="Icon2" type="Sprite2D" parent="Helm"]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(0, 41.625)
 rotation = 3.14159
 scale = Vector2(0.01, 0.605)
-texture = ExtResource("1_djxel")
+texture = ExtResource("3_gur1r")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 15)
+shape = ExtResource("4_n4l4i")
+
+[node name="Detec" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detec"]
+position = Vector2(-1, 15)
+shape = ExtResource("4_n4l4i")
+debug_color = Color(0.986502, 0.113597, 3.85046e-07, 0.42)
+
+[node name="Left_Shoot" type="Node2D" parent="."]
+position = Vector2(115, -11)
+
+[node name="Right_Shoot" type="Node2D" parent="."]
+position = Vector2(-130, -14)
+scale = Vector2(-1, -1)

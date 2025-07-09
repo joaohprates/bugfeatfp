@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://n8nw8ibmd71n"]
+
+[ext_resource type="Script" uid="uid://dlhajnjxdh03x" path="res://cannon_ball.gd" id="1_us5an"]
+[ext_resource type="Texture2D" uid="uid://bc2rpomv5s4sr" path="res://icon.svg" id="2_1n7g4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qhxma"]
+radius = 12.0416
+
+[node name="cannonBall" type="CharacterBody2D"]
+position = Vector2(16, 0)
+script = ExtResource("1_us5an")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-16, 0)
+scale = Vector2(0.203125, 0.195313)
+texture = ExtResource("2_1n7g4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-16, 1)
+shape = SubResource("CircleShape2D_qhxma")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(-16, 47.5)
+scale = Vector2(0.203125, 0.195313)
+texture = ExtResource("2_1n7g4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-16, 48.5)
+shape = SubResource("CircleShape2D_qhxma")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-16, -46.5)
+scale = Vector2(0.203125, 0.195313)
+texture = ExtResource("2_1n7g4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-16, -46.5)
+shape = SubResource("CircleShape2D_qhxma")

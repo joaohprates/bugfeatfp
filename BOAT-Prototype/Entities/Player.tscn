@@ -1,10 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://b0ruar5bhgln"]
 
 [ext_resource type="Script" uid="uid://d2ld6k5o74xc8" path="res://Scripts/player.gd" id="1_1iada"]
-[ext_resource type="Texture2D" uid="uid://bc2rpomv5s4sr" path="res://icon.svg" id="1_xhfnw"]
+[ext_resource type="Texture2D" uid="uid://bsmv2jelfcly5" path="res://Assets/Modelo Personagem padrao.png" id="2_1iada"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_kpjcp"]
-radius = 31.257
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1iada"]
+radius = 2.0
+height = 10.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gntrk"]
 radius = 11.1803
@@ -13,11 +14,16 @@ radius = 11.1803
 script = ExtResource("1_1iada")
 
 [node name="Icon" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_xhfnw")
+position = Vector2(1.30402, -10.9262)
+scale = Vector2(0.817238, 0.817238)
+skew = 0.0174533
+texture = ExtResource("2_1iada")
 
 [node name="Colision" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_kpjcp")
+position = Vector2(0.30402, 0.0738258)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_1iada")
+one_way_collision_margin = 0.0
 
 [node name="IntArea" type="Area2D" parent="."]
 collision_mask = 2
@@ -27,6 +33,7 @@ shape = SubResource("CircleShape2D_gntrk")
 debug_color = Color(0.998761, 0, 0.133327, 0.42)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
 position_smoothing_enabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
