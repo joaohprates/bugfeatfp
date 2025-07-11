@@ -1,3 +1,7 @@
+Area2D
+TileMapLayer
+ParallaxLayer
+ParallaxBackground
 TextureRect
 AnimationPlayer
 VideoStreamPlayer
@@ -9,6 +13,3 @@ VBoxContainer
 ColorRect
 CanvasLayer
 Control
-Label
-Button
-Panel

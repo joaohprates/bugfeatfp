@@ -6,3 +6,5 @@
 003 - Adição de inimigo rudimentar
 
 004 - Adição de ataque de canhão e menu de pause
+
+005 - Ajuste no ataque de canhão, menu de pause e teste em mar

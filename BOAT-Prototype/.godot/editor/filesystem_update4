@@ -1,4 +1,4 @@
-res://Scenes/pause.tscn
+res://Scenes/mar.tscn
 res://UI/Button.tres
 res://Scenes/Sea.tscn
 res://Scenes/Room.tscn
@@ -8,7 +8,8 @@ res://Scenes/Tela_Inicial.tscn
 res://UI/Expedition.tscn
 res://Entities/b_player.tscn
 res://Scenes/Terrain.tscn
-res://Entities/character_body_2d.tscn
+res://Scenes/pause.tscn
 res://Entities/cannonBall.tscn
-res://cannon_ball.gd
 res://Scripts/b_player.gd
+res://cannon_ball.gd
+res://Scenes/pause.gd

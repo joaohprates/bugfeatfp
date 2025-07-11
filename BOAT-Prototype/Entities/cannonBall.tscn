@@ -6,8 +6,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_qhxma"]
 radius = 12.0416
 
-[node name="cannonBall" type="CharacterBody2D"]
-position = Vector2(16, 0)
+[node name="cannonBall" type="Area2D" groups=["cannonBall"]]
+position = Vector2(15, -1)
 script = ExtResource("1_us5an")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -17,22 +17,4 @@ texture = ExtResource("2_1n7g4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-16, 1)
-shape = SubResource("CircleShape2D_qhxma")
-
-[node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(-16, 47.5)
-scale = Vector2(0.203125, 0.195313)
-texture = ExtResource("2_1n7g4")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(-16, 48.5)
-shape = SubResource("CircleShape2D_qhxma")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(-16, -46.5)
-scale = Vector2(0.203125, 0.195313)
-texture = ExtResource("2_1n7g4")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(-16, -46.5)
 shape = SubResource("CircleShape2D_qhxma")

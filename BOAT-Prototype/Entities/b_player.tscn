@@ -40,9 +40,23 @@ position = Vector2(-1, 15)
 shape = ExtResource("4_n4l4i")
 debug_color = Color(0.986502, 0.113597, 3.85046e-07, 0.42)
 
-[node name="Left_Shoot" type="Node2D" parent="."]
-position = Vector2(115, -11)
-
 [node name="Right_Shoot" type="Node2D" parent="."]
-position = Vector2(-130, -14)
+position = Vector2(115, -14)
+
+[node name="Right_Shoot3" type="Node2D" parent="."]
+position = Vector2(115, 14)
+
+[node name="Right_Shoot2" type="Node2D" parent="."]
+position = Vector2(115, -47)
+
+[node name="Left_Shoot" type="Node2D" parent="."]
+position = Vector2(-115, -14)
+scale = Vector2(-1, -1)
+
+[node name="Left_Shoot2" type="Node2D" parent="."]
+position = Vector2(-115, 14)
+scale = Vector2(-1, -1)
+
+[node name="Left_Shoot3" type="Node2D" parent="."]
+position = Vector2(-115, -47)
 scale = Vector2(-1, -1)
