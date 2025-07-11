@@ -1,8 +1,8 @@
-res://Scenes/mar.tscn
+res://Enemy.gd
+res://Entities/Enemy.tscn
 res://UI/Button.tres
 res://Scenes/Sea.tscn
 res://Scenes/Room.tscn
-res://Entities/Enemy.tscn
 res://Entities/totem.tscn
 res://Scenes/Tela_Inicial.tscn
 res://UI/Expedition.tscn
@@ -10,6 +10,5 @@ res://Entities/b_player.tscn
 res://Scenes/Terrain.tscn
 res://Scenes/pause.tscn
 res://Entities/cannonBall.tscn
+res://Scenes/mar.tscn
 res://Scripts/b_player.gd
-res://cannon_ball.gd
-res://Scenes/pause.gd

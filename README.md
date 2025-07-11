@@ -10,3 +10,5 @@
 005 - Finalização da movimentação do inimigo
 
 006 - Ajuste no ataque de canhão, menu de pause e teste em mar (sem commit 5)
+
+007 - Mesclando commit 005 e 006
