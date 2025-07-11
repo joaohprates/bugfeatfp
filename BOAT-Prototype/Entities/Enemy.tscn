@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2ryntygpwkeo"]
+[gd_scene load_steps=7 format=3 uid="uid://c2ryntygpwkeo"]
 
 [ext_resource type="Script" uid="uid://drivp53kikvgn" path="res://Enemy.gd" id="1_v5eek"]
 [ext_resource type="Texture2D" uid="uid://bc2rpomv5s4sr" path="res://icon.svg" id="2_s5jqb"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1jwd2"]
 radius = 300.107
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s5jqb"]
+radius = 566.032
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v5eek"]
 radius = 300.0
@@ -43,9 +46,16 @@ texture = ExtResource("2_s5jqb")
 [node name="Mark" type="Marker2D" parent="."]
 position = Vector2(0, -1)
 
-[node name="Combat_Zone" type="Area2D" parent="."]
+[node name="Outer_Combat_Zone" type="Area2D" parent="."]
+collision_layer = 0
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Combat_Zone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Outer_Combat_Zone"]
+shape = SubResource("CircleShape2D_s5jqb")
+
+[node name="Inner_Combat_Zone" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Inner_Combat_Zone"]
 shape = SubResource("CircleShape2D_v5eek")
 debug_color = Color(0.879525, 0.000370607, 0.824685, 0.42)
 

@@ -1,7 +1,9 @@
+CollisionShape2D
+Area2D
+Timer
 TextureRect
 AnimationPlayer
 VideoStreamPlayer
-CollisionShape2D
 Sprite2D
 CharacterBody2D
 Node2D
@@ -10,5 +12,3 @@ ColorRect
 CanvasLayer
 Control
 Label
-Button
-Panel

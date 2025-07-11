@@ -26,16 +26,17 @@ scale = Vector2(0.01, 0.605)
 texture = ExtResource("3_gur1r")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 15)
 shape = ExtResource("4_n4l4i")
 
-[node name="Detec" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="."]
 collision_layer = 5
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Detec"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(-1, 15)
 shape = ExtResource("4_n4l4i")
 debug_color = Color(0.986502, 0.113597, 3.85046e-07, 0.42)
@@ -44,5 +45,5 @@ debug_color = Color(0.986502, 0.113597, 3.85046e-07, 0.42)
 position = Vector2(115, -11)
 
 [node name="Right_Shoot" type="Node2D" parent="."]
-position = Vector2(-130, -14)
+position = Vector2(-115, -14)
 scale = Vector2(-1, -1)

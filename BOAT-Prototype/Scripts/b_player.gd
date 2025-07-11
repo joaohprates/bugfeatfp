@@ -27,10 +27,6 @@ func _process(delta: float) -> void:
 	Inputs()
 	
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("LEFT_SHOOT"):
-		leftFire()
-	if Input.is_action_just_pressed("RIGHT_SHOOT"):
-		rightFire()
 	move()
 	
 func leftFire():
@@ -93,5 +89,8 @@ func Inputs():
 		if !isturn:
 			t_speed = 0
 			isturn = true
-
+	if Input.is_action_just_pressed("LEFT_SHOOT"):
+		leftFire()
+	if Input.is_action_just_pressed("RIGHT_SHOOT"):
+		rightFire()
 	

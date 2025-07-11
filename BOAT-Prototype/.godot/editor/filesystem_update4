@@ -1,14 +1,12 @@
-res://Scenes/pause.tscn
+res://Entities/Enemy.tscn
 res://UI/Button.tres
+res://Enemy.gd
 res://Scenes/Sea.tscn
 res://Scenes/Room.tscn
-res://Entities/Enemy.tscn
 res://Entities/totem.tscn
 res://Scenes/Tela_Inicial.tscn
 res://UI/Expedition.tscn
 res://Entities/b_player.tscn
 res://Scenes/Terrain.tscn
-res://Entities/character_body_2d.tscn
+res://Scenes/pause.tscn
 res://Entities/cannonBall.tscn
-res://cannon_ball.gd
-res://Scripts/b_player.gd

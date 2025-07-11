@@ -21,6 +21,7 @@ script = ExtResource("1_g5o3i")
 [node name="B_Player" parent="." instance=ExtResource("2_5a4dd")]
 z_index = 1
 position = Vector2(549, 325)
+max_speed = 200
 max_t_speed = 0.01
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
