@@ -1,9 +1,11 @@
-CollisionShape2D
 Area2D
-Timer
+TileMapLayer
+ParallaxLayer
+ParallaxBackground
 TextureRect
 AnimationPlayer
 VideoStreamPlayer
+CollisionShape2D
 Sprite2D
 CharacterBody2D
 Node2D
@@ -11,4 +13,3 @@ VBoxContainer
 ColorRect
 CanvasLayer
 Control
-Label

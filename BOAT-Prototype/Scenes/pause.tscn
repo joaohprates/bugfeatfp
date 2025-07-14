@@ -21,6 +21,7 @@ frame_3/duration = 0.2
 
 [node name="Pause" type="CanvasLayer"]
 process_mode = 3
+layer = 5
 script = ExtResource("1_l2mpd")
 
 [node name="ColorRect" type="ColorRect" parent="."]
