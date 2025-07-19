@@ -11,7 +11,6 @@ script = ExtResource("1_g5o3i")
 
 [node name="B_Player" parent="." instance=ExtResource("2_5a4dd")]
 position = Vector2(549, 325)
-max_speed = 200
 
 [node name="Enemy" parent="." instance=ExtResource("3_iio4m")]
 position = Vector2(140, -91)
