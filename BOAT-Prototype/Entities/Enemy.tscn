@@ -48,15 +48,52 @@ position = Vector2(0, -1)
 
 [node name="Outer_Combat_Zone" type="Area2D" parent="."]
 collision_layer = 0
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Outer_Combat_Zone"]
 shape = SubResource("CircleShape2D_s5jqb")
 
 [node name="Inner_Combat_Zone" type="Area2D" parent="."]
 collision_layer = 0
+collision_mask = 4
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Inner_Combat_Zone"]
 shape = SubResource("CircleShape2D_v5eek")
 debug_color = Color(0.879525, 0.000370607, 0.824685, 0.42)
+
+[node name="Right_Shoot" type="Node2D" parent="."]
+position = Vector2(115, -14)
+
+[node name="Right_Shoot3" type="Node2D" parent="."]
+position = Vector2(115, 14)
+
+[node name="Right_Shoot2" type="Node2D" parent="."]
+position = Vector2(115, -47)
+
+[node name="Left_Shoot" type="Node2D" parent="."]
+position = Vector2(-115, -14)
+scale = Vector2(-1, -1)
+
+[node name="Left_Shoot2" type="Node2D" parent="."]
+position = Vector2(-115, 14)
+scale = Vector2(-1, -1)
+
+[node name="Left_Shoot3" type="Node2D" parent="."]
+position = Vector2(-115, -47)
+scale = Vector2(-1, -1)
+
+[node name="LeftAim" type="RayCast2D" parent="."]
+position = Vector2(-130, 0)
+target_position = Vector2(-700, 0)
+collision_mask = 4
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="RightAim" type="RayCast2D" parent="."]
+position = Vector2(65, 0)
+target_position = Vector2(700, 0)
+collision_mask = 4
+collide_with_areas = true
+collide_with_bodies = false
 
 [connection signal="area_entered" from="Detec_Area" to="." method="_on_detec_area_area_entered"]

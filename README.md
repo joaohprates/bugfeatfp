@@ -12,3 +12,7 @@
 006 - Ajuste no ataque de canhão, menu de pause e teste em mar (sem commit 5)
 
 007 - Mesclando commit 005 e 006
+
+008 - Implementação do sistema de diálogo
+
+009 - Adicionando visual, mar, terra, tela de expedição e personagem

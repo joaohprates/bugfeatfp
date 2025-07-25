@@ -7,13 +7,20 @@ var speed = 0
 var dir = Vector2.ZERO
 var accel = 1750
 var active = true
+var dict = {
+	1 : 2,
+	3 : 4
+}
 
 func _ready() -> void:
 	Global.player = self
 	Global.Tela_Player = UI
 func _physics_process(delta: float) -> void:
 	if active:
+		$IntArea/CollisionShape2D.disabled = false
 		move(delta)
+	else:
+		$IntArea/CollisionShape2D.disabled = true
 func _process(delta: float) -> void:
 	inputs()
 func move(delta):

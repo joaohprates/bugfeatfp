@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://43hmgyj0lyfn"]
+[gd_scene load_steps=7 format=3 uid="uid://43hmgyj0lyfn"]
 
 [ext_resource type="Script" uid="uid://b8o0877ckxmpm" path="res://Scenes/pause.gd" id="1_l2mpd"]
-[ext_resource type="Theme" uid="uid://dmcbx8wot5aax" path="res://Assets/button theme/new_theme.tres" id="1_o80xk"]
 [ext_resource type="Texture2D" uid="uid://ei8vf2iojgdd" path="res://Assets/pause_menu/Animation pause/tile000.png" id="3_nsogc"]
 [ext_resource type="Texture2D" uid="uid://cp4iuv0a2jcef" path="res://Assets/pause_menu/Animation pause/tile001.png" id="4_0pswh"]
 [ext_resource type="Texture2D" uid="uid://bhnrlxxqr6k4e" path="res://Assets/pause_menu/Animation pause/tile002.png" id="5_54e2h"]
@@ -45,7 +44,6 @@ alignment = 1
 offset_top = 321.0
 offset_right = 1152.0
 offset_bottom = 366.0
-theme = ExtResource("1_o80xk")
 text = "Voltar"
 
 [node name="sair" type="Button" parent="."]
@@ -62,7 +60,6 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme = ExtResource("1_o80xk")
 text = "Sair"
 
 [node name="TextureRect" type="TextureRect" parent="."]

@@ -1,0 +1,212 @@
+[gd_scene load_steps=10 format=3 uid="uid://kteb1bf5i0kr"]
+
+[ext_resource type="Script" uid="uid://o325b7n2e2dk" path="res://UI/dialog_box.gd" id="1_wc47m"]
+[ext_resource type="Texture2D" uid="uid://bsmv2jelfcly5" path="res://Assets/Modelo Personagem padrao.png" id="2_6co6m"]
+[ext_resource type="Script" uid="uid://be31b6rdkjltw" path="res://UI/pause_calculator.gd" id="2_diy2i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cmh27"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wc47m"]
+bg_color = Color(0.92, 0.92, 0.92, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0.8275, 0.31, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmh27"]
+bg_color = Color(0.92, 0.88274, 0.6716, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0.8275, 0.31, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Animation" id="Animation_7oaei"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Speaker/SpeakerSprite:position:y:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.1, 0, 0.1, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Speaker/SpeakerSprite:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.1, 0, 0.1, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Speaker/SpeakerSprite:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(122, -0.1, 0, 0.1, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_6co6m"]
+resource_name = "Speaker_Speak"
+length = 0.05
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Speaker/SpeakerSprite:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(122, -0.1, 0, 0.1, 0, 122, -0.1, 0, 0.1, 0, 122, -0.1, 0, 0.1, -7.5),
+"times": PackedFloat32Array(0, 0.0333333, 0.2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Speaker/SpeakerSprite:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(3, 3, 3),
+"points": PackedFloat32Array(225, -0.005375, 0, 0.005375, 0, 215, -0.005375, 0, 0.005375, 0, 225, -0.006875, 0, 0.006875, 0),
+"times": PackedFloat32Array(0.001, 0.0225, 0.05)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o26rr"]
+_data = {
+&"RESET": SubResource("Animation_7oaei"),
+&"Speaker_Speak": SubResource("Animation_6co6m")
+}
+
+[node name="DialogBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wc47m")
+
+[node name="Speaker" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.496528
+anchor_right = 0.999999
+anchor_bottom = 0.95
+offset_left = 217.0
+offset_top = 179.0
+offset_right = -108.999
+offset_bottom = -187.6
+metadata/_edit_lock_ = true
+
+[node name="SpeakerSprite" type="Sprite2D" parent="Speaker"]
+modulate = Color(0, 0.1, 1, 1)
+position = Vector2(122, 0)
+scale = Vector2(15, 15)
+texture = ExtResource("2_6co6m")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -284.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_cmh27")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer/PanelContainer"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wc47m")
+
+[node name="Name" type="RichTextLabel" parent="MarginContainer/VBoxContainer/PanelContainer"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0.92, 0.92, 0.92, 1)
+theme_override_colors/font_outline_color = Color(1, 0.827451, 0.309804, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "Character Name"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cmh27")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Content" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 0.827451, 0.309804, 1)
+theme_override_constants/outline_size = 10
+bbcode_enabled = true
+text = "FALA DA PERSONAGEM"
+
+[node name="TypeTimer" type="Timer" parent="."]
+wait_time = 0.05
+
+[node name="PauseCalculator" type="Node" parent="."]
+script = ExtResource("2_diy2i")
+
+[node name="PauseTimer" type="Timer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_o26rr")
+}

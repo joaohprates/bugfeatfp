@@ -1,14 +1,6 @@
-res://Enemy.gd
-res://Entities/Enemy.tscn
-res://UI/Button.tres
-res://Scenes/Sea.tscn
 res://Scenes/Room.tscn
+res://Assets/button theme/new_theme.tres
+res://Assets/sea/script/oceano.gdshader
+res://base_npc.gd
+res://Entities/Player.tscn
 res://Entities/totem.tscn
-res://Scenes/Tela_Inicial.tscn
-res://UI/Expedition.tscn
-res://Entities/b_player.tscn
-res://Scenes/Terrain.tscn
-res://Scenes/pause.tscn
-res://Entities/cannonBall.tscn
-res://Scenes/mar.tscn
-res://Scripts/b_player.gd
