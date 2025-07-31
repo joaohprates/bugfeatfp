@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c2ryntygpwkeo"]
 
-[ext_resource type="Script" uid="uid://drivp53kikvgn" path="res://Enemy.gd" id="1_v5eek"]
+[ext_resource type="Script" uid="uid://drivp53kikvgn" path="res://Entities/Entities_Scripts/Enemy.gd" id="1_v5eek"]
 [ext_resource type="Texture2D" uid="uid://bc2rpomv5s4sr" path="res://icon.svg" id="2_s5jqb"]
 [ext_resource type="Shape2D" uid="uid://dfoxk0okaflqk" path="res://Entities/Hitbox_Barco.tres" id="3_s5jqb"]
 

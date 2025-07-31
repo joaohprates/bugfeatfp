@@ -4,3 +4,17 @@ res://Assets/sea/script/oceano.gdshader
 res://base_npc.gd
 res://Entities/Player.tscn
 res://Entities/totem.tscn
+res://Scripts/canhao.gd
+res://cannon_ball.gd
+res://Scenes/pause.gd
+res://UI/Button.tres
+res://UI/Tela_Inicial.tscn
+res://UI/dialog_box.tscn
+res://Entities/Entities_Scripts/base_npc.gd
+res://Entities/JohnGodotData.tres
+res://Entities/base_npc.tscn
+res://Entities/base_npc.gd
+res://UI/UI_Scripts/base_npc.gd
+res://UI/UI_Scripts/base_npc.tscn
+res://JohnGodotDial.gd
+res://JohnGodotData.tres

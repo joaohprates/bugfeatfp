@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dgbwhr4npfcu7"]
 
-[ext_resource type="Script" uid="uid://c6sly0a5h5hyf" path="res://UI/expedition.gd" id="1_4om8g"]
+[ext_resource type="Script" uid="uid://c6sly0a5h5hyf" path="res://UI/UI_Scripts/expedition.gd" id="1_4om8g"]
 [ext_resource type="Texture2D" uid="uid://b3a1u743vrart" path="res://Assets/objects/Totem/MapaGrande.png" id="2_mqio0"]
 [ext_resource type="Theme" uid="uid://dmcbx8wot5aax" path="res://Assets/button theme/new_theme.tres" id="3_tik6u"]
 

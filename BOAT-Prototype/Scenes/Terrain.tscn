@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=4 uid="uid://l142u5s52m26"]
 
-[ext_resource type="Script" uid="uid://bm6vuh3lx528c" path="res://Scenes/terrain.gd" id="1_icyg6"]
+[ext_resource type="Script" uid="uid://bm6vuh3lx528c" path="res://Scenes/Scenes_Scripts/terrain.gd" id="1_icyg6"]
 [ext_resource type="Texture2D" uid="uid://pycmefpdulis" path="res://Assets/terrain/Spritesheet SE PA RA DO.png" id="2_icyg6"]
 [ext_resource type="Texture2D" uid="uid://df8cugj0fvtk3" path="res://Assets/sea/Fundo Mar2.png" id="3_7x3kn"]
 [ext_resource type="Texture2D" uid="uid://xa7r6jtfghvx" path="res://Assets/terrain/Areia Definitivo.png" id="4_xdnbq"]

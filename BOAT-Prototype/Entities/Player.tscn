@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b0ruar5bhgln"]
 
-[ext_resource type="Script" uid="uid://d2ld6k5o74xc8" path="res://Scripts/player.gd" id="1_1iada"]
+[ext_resource type="Script" uid="uid://d2ld6k5o74xc8" path="res://Entities/Entities_Scripts/player.gd" id="1_1iada"]
 [ext_resource type="Texture2D" uid="uid://dukgw8wfqowsb" path="res://Assets/Personagem/Sprite-0001.png" id="2_1iada"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1iada"]

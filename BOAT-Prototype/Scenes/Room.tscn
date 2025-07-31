@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://dav0i5jr0o2tb"]
 
-[ext_resource type="Script" uid="uid://b51673nq87m0h" path="res://Scenes/room.gd" id="1_aaq88"]
+[ext_resource type="Script" uid="uid://b51673nq87m0h" path="res://Scenes/Scenes_Scripts/room.gd" id="1_aaq88"]
 [ext_resource type="PackedScene" uid="uid://b0ruar5bhgln" path="res://Entities/Player.tscn" id="1_nn86p"]
 [ext_resource type="PackedScene" uid="uid://clnms1okm4epx" path="res://Entities/totem.tscn" id="2_uj218"]
-[ext_resource type="PackedScene" uid="uid://bdfrwyvcg142u" path="res://dialogue_manager.tscn" id="2_xebr5"]
+[ext_resource type="PackedScene" uid="uid://bdfrwyvcg142u" path="res://Scenes/dialogue_manager.tscn" id="2_xebr5"]
 [ext_resource type="PackedScene" uid="uid://l142u5s52m26" path="res://Scenes/Terrain.tscn" id="3_uj218"]
-[ext_resource type="PackedScene" uid="uid://43hmgyj0lyfn" path="res://Scenes/pause.tscn" id="4_a2si3"]
-[ext_resource type="PackedScene" uid="uid://cf6snejajmt3q" path="res://Entities/base_npc.tscn" id="6_7gm67"]
+[ext_resource type="PackedScene" uid="uid://43hmgyj0lyfn" path="res://UI/pause.tscn" id="4_a2si3"]
+[ext_resource type="PackedScene" uid="uid://cf6snejajmt3q" path="res://UI/UI_Scripts/base_npc.tscn" id="6_7gm67"]
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
@@ -26,6 +26,7 @@ position = Vector2(417.259, 282.951)
 
 [node name="Terrain" parent="." instance=ExtResource("3_uj218")]
 position = Vector2(365.772, 222.865)
+script = null
 
 [node name="Pause" parent="." instance=ExtResource("4_a2si3")]
 

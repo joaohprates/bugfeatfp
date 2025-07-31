@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://clnms1okm4epx"]
 
-[ext_resource type="Script" uid="uid://c5othi20qcyvy" path="res://totem.gd" id="1_7r4rh"]
+[ext_resource type="Script" uid="uid://c5othi20qcyvy" path="res://Entities/Entities_Scripts/totem.gd" id="1_7r4rh"]
 [ext_resource type="Texture2D" uid="uid://di0d4g3bmdahn" path="res://Assets/objects/Totem/mesaToken.png" id="2_7r4rh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ymark"]

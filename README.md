@@ -16,3 +16,5 @@
 008 - Implementação do sistema de diálogo
 
 009 - Adicionando visual, mar, terra, tela de expedição e personagem
+
+010 - Organização 1
