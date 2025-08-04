@@ -1,5 +1,5 @@
 .godot/
-editor
+editor/*.cfg
 
 # Godot 4+ specific ignores
 .godot/
@@ -17,5 +17,4 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
-
 
