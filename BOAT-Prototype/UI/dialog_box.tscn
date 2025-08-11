@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://o325b7n2e2dk" path="res://UI/UI_Scripts/dialog_box.gd" id="1_wc47m"]
 [ext_resource type="Texture2D" uid="uid://cr8dayhxnbhys" path="res://Assets/Personagem/Modelo Personagem padrao v.J.png" id="2_6co6m"]
-[ext_resource type="Script" uid="uid://be31b6rdkjltw" path="res://UI/UI_Scripts/pause_calculator.gd" id="2_diy2i"]
+[ext_resource type="Script" uid="uid://be31b6rdkjltw" path="res://Scripts/pause_calculator.gd" id="2_diy2i"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cmh27"]
 
@@ -196,7 +196,7 @@ layout_mode = 2
 theme_override_colors/font_outline_color = Color(1, 0.827451, 0.309804, 1)
 theme_override_constants/outline_size = 10
 bbcode_enabled = true
-text = "FALA DA PERSONAGEM"
+text = "FALA DA [wave][shake]PERSONAGEM"
 
 [node name="TypeTimer" type="Timer" parent="."]
 wait_time = 0.05

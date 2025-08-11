@@ -24,10 +24,18 @@ texture = ExtResource("2_s5jqb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = ExtResource("3_s5jqb")
 
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-1, 15)
+shape = ExtResource("3_s5jqb")
+debug_color = Color(0.986502, 0.113597, 3.85046e-07, 0.42)
+
 [node name="Detec_Area" type="Area2D" parent="."]
 visible = false
 collision_layer = 0
-collision_mask = 4
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detec_Area"]
 shape = SubResource("CircleShape2D_1jwd2")
@@ -48,14 +56,14 @@ position = Vector2(0, -1)
 
 [node name="Outer_Combat_Zone" type="Area2D" parent="."]
 collision_layer = 0
-collision_mask = 4
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Outer_Combat_Zone"]
 shape = SubResource("CircleShape2D_s5jqb")
 
 [node name="Inner_Combat_Zone" type="Area2D" parent="."]
 collision_layer = 0
-collision_mask = 4
+collision_mask = 16
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Inner_Combat_Zone"]
 shape = SubResource("CircleShape2D_v5eek")

@@ -2,11 +2,22 @@
 
 [ext_resource type="Script" uid="uid://c8ubmilnpbhpj" path="res://Entities/Entities_Scripts/b_player.gd" id="1_jl4rr"]
 [ext_resource type="Texture2D" uid="uid://bewd04o8x5u5l" path="res://Assets/Barco/barco.png" id="2_gur1r"]
-[ext_resource type="Texture2D" path="res://White Square.png" id="3_gur1r"]
+[ext_resource type="Texture2D" uid="uid://bc2rpomv5s4sr" path="res://icon.svg" id="3_n4l4i"]
 [ext_resource type="Shape2D" uid="uid://dfoxk0okaflqk" path="res://Entities/Hitbox_Barco.tres" id="4_n4l4i"]
 
 [node name="B_Player" type="CharacterBody2D"]
 script = ExtResource("1_jl4rr")
+max_speed = 100.0
+max_t_speed = 0.005
+
+[node name="Playerbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Playerbox"]
+position = Vector2(-1, 15)
+shape = ExtResource("4_n4l4i")
+debug_color = Color(0.986502, 0.113597, 3.85046e-07, 0.42)
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(-1, 0)
@@ -23,7 +34,7 @@ modulate = Color(0, 0, 0, 1)
 position = Vector2(0, 41.625)
 rotation = 3.14159
 scale = Vector2(0.01, 0.605)
-texture = ExtResource("3_gur1r")
+texture = ExtResource("3_n4l4i")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.5, 0.5)
@@ -33,8 +44,7 @@ position = Vector2(-1, 15)
 shape = ExtResource("4_n4l4i")
 
 [node name="Hitbox" type="Area2D" parent="."]
-collision_layer = 4
-collision_mask = 0
+collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(-1, 15)

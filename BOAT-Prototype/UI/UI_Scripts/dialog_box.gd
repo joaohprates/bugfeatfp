@@ -42,7 +42,7 @@ func update_message():
 
 func TypeTimer_timeout():
 	$PauseCalculator.check_at_position(content.visible_characters)
-	if content.visible_characters < content.text.length():
+	if content.visible_characters < content.text.length() and content.visible_ratio < 1:
 		$AnimationPlayer.play("Speaker_Speak")
 		content.visible_characters += 1
 	else:

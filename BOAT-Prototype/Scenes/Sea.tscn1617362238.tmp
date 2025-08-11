@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://gw5jiwooiolq"]
+
+[ext_resource type="Script" uid="uid://ymgdglemnqbv" path="res://Scenes/Scenes_Scripts/sea.gd" id="1_g5o3i"]
+[ext_resource type="PackedScene" uid="uid://caogjt86juwxt" path="res://Entities/b_player.tscn" id="2_5a4dd"]
+[ext_resource type="PackedScene" uid="uid://c2ryntygpwkeo" path="res://Entities/Enemy.tscn" id="3_iio4m"]
+[ext_resource type="PackedScene" uid="uid://43hmgyj0lyfn" path="res://UI/pause.tscn" id="5_7kstw"]
+[ext_resource type="PackedScene" uid="uid://p2exkqem5ujy" path="res://Scenes/mar.tscn" id="5_22eiw"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_g5o3i")
+
+[node name="B_Player" parent="." instance=ExtResource("2_5a4dd")]
+position = Vector2(549, 325)
+
+[node name="Enemy" parent="." instance=ExtResource("3_iio4m")]
+position = Vector2(140, -91)
+
+[node name="Pause" parent="." instance=ExtResource("5_7kstw")]
+
+[node name="mar" parent="." instance=ExtResource("5_22eiw")]
+z_index = -1

@@ -1,20 +1,20 @@
 res://Scenes/Room.tscn
-res://Assets/button theme/new_theme.tres
 res://Assets/sea/script/oceano.gdshader
-res://base_npc.gd
-res://Entities/Player.tscn
-res://Entities/totem.tscn
-res://Scripts/canhao.gd
-res://cannon_ball.gd
-res://Scenes/pause.gd
-res://UI/Button.tres
-res://UI/Tela_Inicial.tscn
-res://UI/dialog_box.tscn
-res://Entities/Entities_Scripts/base_npc.gd
-res://Entities/JohnGodotData.tres
-res://Entities/base_npc.tscn
-res://Entities/base_npc.gd
 res://UI/UI_Scripts/base_npc.gd
-res://UI/UI_Scripts/base_npc.tscn
 res://JohnGodotDial.gd
 res://JohnGodotData.tres
+res://UI/Button.tres
+res://Scripts/Boat.gd
+res://Entities/Entities_Scripts/b_player.gd
+res://Entities/b_player.tscn
+res://Entities/Entities_Scripts/Enemy.gd
+res://Entities/Player.tscn
+res://Entities/totem.tscn
+res://UI/Tela_Inicial.tscn
+res://UI/dialog_box.tscn
+res://UI/UI_Scripts/base_npc.tscn
+res://Scenes/Sea.tscn
+res://Entities/Enemy.tscn
+res://Entities/Entities_Scripts/totem.gd
+res://Assets/button theme/new_theme.tres
+res://Entities/cannonBall.tscn
