@@ -1,6 +1,6 @@
 extends NPC
 
-var dials = preload("res://JohnGodotData.tres")
+@export var dials = preload("res://Entities/JohnGodotData.tres")
 var nome = "John Godot"
 var dialogues = {'test' : ['This is a test dialogue.{p=1.0} That was a pause test', 'Good morning.{p=0.5} [wave]Good Evening[/wave].{p=0.5} And Good Night', '[shake]Fuck you[/shake]']}
 var fala = dials.falas['greet']
