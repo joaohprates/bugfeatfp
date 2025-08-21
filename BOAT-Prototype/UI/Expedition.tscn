@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgbwhr4npfcu7"]
+
+[ext_resource type="Script" uid="uid://c6sly0a5h5hyf" path="res://UI/UI_Scripts/expedition.gd" id="1_4om8g"]
+[ext_resource type="Texture2D" uid="uid://b3a1u743vrart" path="res://Assets/objects/Totem/MapaGrande.png" id="2_mqio0"]
+[ext_resource type="Theme" uid="uid://dmcbx8wot5aax" path="res://Assets/button theme/new_theme.tres" id="3_tik6u"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sklys"]
+texture = ExtResource("2_mqio0")
+
+[sub_resource type="LabelSettings" id="LabelSettings_odbp5"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4om8g")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -552.0
+offset_top = -303.0
+offset_right = 593.0
+offset_bottom = 681.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_sklys")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -54.0
+offset_top = -1.0
+offset_right = 35.0
+offset_bottom = 81.0
+theme = ExtResource("3_tik6u")
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = -26.0
+offset_top = 159.0
+offset_right = 123.0
+offset_bottom = 250.667
+text = "NAVEGAR
+"
+label_settings = SubResource("LabelSettings_odbp5")
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

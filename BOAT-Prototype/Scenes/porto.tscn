@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://bryanouw8otib"]
+
+[ext_resource type="Texture2D" uid="uid://bc2rpomv5s4sr" path="res://icon.svg" id="1_887c0"]
+[ext_resource type="Script" uid="uid://dn3bc8g3ujb10" path="res://Scenes/porto.gd" id="1_wlonm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wlonm"]
+radius = 128.016
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wlonm"]
+size = Vector2(56, 152)
+
+[node name="Porto" type="Node2D"]
+script = ExtResource("1_wlonm")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 4
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, -1)
+shape = SubResource("CircleShape2D_wlonm")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_wlonm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.999999, 0)
+rotation = 1.5708
+scale = Vector2(1.17188, 0.421875)
+texture = ExtResource("1_887c0")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_exit"]

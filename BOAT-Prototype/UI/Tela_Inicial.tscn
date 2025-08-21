@@ -1,0 +1,161 @@
+[gd_scene load_steps=7 format=3 uid="uid://ddghqq0qp5h1q"]
+
+[ext_resource type="Script" uid="uid://crmrpwc1e8uen" path="res://UI/UI_Scripts/TelaInicial.gd" id="1_py2yf"]
+[ext_resource type="Theme" uid="uid://kv7gys3e5pu4" path="res://Assets/button theme/menu/new_theme.tres" id="2_py2yf"]
+[ext_resource type="Texture2D" uid="uid://cr8dayhxnbhys" path="res://Assets/Personagem/Modelo Personagem padrao v.J.png" id="3_k6iw4"]
+[ext_resource type="PackedScene" uid="uid://dr26mg3ykc5ow" path="res://Scenes/Terrain_menu.tscn" id="4_l3i8o"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wyw5x"]
+font_size = 56
+
+[sub_resource type="LabelSettings" id="LabelSettings_qhp4a"]
+font_size = 36
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_py2yf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -153.0
+offset_top = -121.0
+offset_right = 597.0
+offset_bottom = 671.0
+rotation = 0.127833
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -270.0
+offset_right = -43.0
+offset_bottom = -191.833
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 86
+text = "JOGO DE BARCO"
+label_settings = SubResource("LabelSettings_wyw5x")
+
+[node name="CarregarButton" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+offset_left = 78.0
+offset_top = 221.0
+offset_right = 508.0
+offset_bottom = 296.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource("2_py2yf")
+
+[node name="Label2" type="Label" parent="CarregarButton"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -25.125
+offset_right = 199.0
+offset_bottom = 25.125
+grow_vertical = 2
+text = "  Carregar"
+label_settings = SubResource("LabelSettings_qhp4a")
+vertical_alignment = 1
+
+[node name="CarregarButton2" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+offset_left = 78.0
+offset_top = 296.0
+offset_right = 508.0
+offset_bottom = 371.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Label2" type="Label" parent="CarregarButton2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -25.125
+offset_right = 199.0
+offset_bottom = 25.125
+grow_vertical = 2
+text = "  Configurações"
+label_settings = SubResource("LabelSettings_qhp4a")
+vertical_alignment = 1
+
+[node name="CarregarButton3" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+offset_left = 78.0
+offset_top = 371.0
+offset_right = 508.0
+offset_bottom = 446.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Label2" type="Label" parent="CarregarButton3"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -25.125
+offset_right = 199.0
+offset_bottom = 25.125
+grow_vertical = 2
+text = "  Sair"
+label_settings = SubResource("LabelSettings_qhp4a")
+vertical_alignment = 1
+
+[node name="JogarButton" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+offset_left = 78.0
+offset_top = 146.0
+offset_right = 508.0
+offset_bottom = 221.0
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="JogarButton"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -25.5
+offset_right = 199.0
+offset_bottom = 24.75
+grow_vertical = 2
+text = "  Jogar"
+label_settings = SubResource("LabelSettings_qhp4a")
+vertical_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="."]
+z_index = -1
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+z_index = 1
+position = Vector2(739, 289)
+scale = Vector2(5, 5)
+texture = ExtResource("3_k6iw4")
+
+[node name="Terrain" parent="Node2D" instance=ExtResource("4_l3i8o")]
+position = Vector2(722, -194)
+scale = Vector2(3, 3)
+
+[connection signal="pressed" from="CarregarButton" to="." method="_on_CarregarButton_pressed"]
+[connection signal="pressed" from="CarregarButton2" to="." method="_on_CarregarButton_pressed"]
+[connection signal="pressed" from="CarregarButton3" to="." method="_on_CarregarButton_pressed"]
+[connection signal="pressed" from="JogarButton" to="." method="_on_JogarButton_pressed"]

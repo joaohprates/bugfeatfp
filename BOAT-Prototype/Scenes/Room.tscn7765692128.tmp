@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dav0i5jr0o2tb"]
+
+[ext_resource type="PackedScene" uid="uid://b0ruar5bhgln" path="res://Entities/Player.tscn" id="1_nn86p"]
+[ext_resource type="PackedScene" uid="uid://clnms1okm4epx" path="res://Entities/totem.tscn" id="2_uj218"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_nn86p")]
+position = Vector2(544, 339)
+
+[node name="Totem" parent="." instance=ExtResource("2_uj218")]
+position = Vector2(364, 344)

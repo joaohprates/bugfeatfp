@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://44sx08sf811x"]
+
+[ext_resource type="Script" uid="uid://di143p71sxuub" path="res://JohnGodotDial.gd" id="1_55eii"]
+
+[resource]
+script = ExtResource("1_55eii")
+falas = {
+"greet": ["Hello!{p=0.4} my name is [rainbow]John Godot[/rainbow] {p=0.4}, nice to meet you!", "This island is very small and very [shake]lonely[/shake]{p=0.2}.{p=0.2}.{p=0.2}. I`m glad i have a [wave]friend[/wave] now!"],
+"test": ["hola", "belo paul"]
+}

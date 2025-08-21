@@ -1,0 +1,115 @@
+[gd_scene load_steps=5 format=3 uid="uid://kteb1bf5i0kr"]
+
+[ext_resource type="Script" uid="uid://o325b7n2e2dk" path="res://UI/dialog_box.gd" id="1_wc47m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cmh27"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wc47m"]
+bg_color = Color(0.92, 0.92, 0.92, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0.8275, 0.31, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmh27"]
+bg_color = Color(0.92, 0.88274, 0.6716, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0.8275, 0.31, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="DialogBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wc47m")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -284.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_cmh27")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="MarginContainer/VBoxContainer/PanelContainer"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wc47m")
+
+[node name="Name" type="RichTextLabel" parent="MarginContainer/VBoxContainer/PanelContainer"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0.92, 0.92, 0.92, 1)
+theme_override_colors/font_outline_color = Color(1, 0.827451, 0.309804, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "Character Name"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cmh27")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Content" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 0.827451, 0.309804, 1)
+theme_override_constants/outline_size = 10
+bbcode_enabled = true
+text = "FALA DA PERSONAGEM"
+
+[node name="TypeTimer" type="Timer" parent="."]
+wait_time = 0.05
