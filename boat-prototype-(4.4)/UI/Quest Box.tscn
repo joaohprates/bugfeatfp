@@ -1,0 +1,120 @@
+[gd_scene load_steps=5 format=3 uid="uid://bv5iqhnl2vvos"]
+
+[ext_resource type="StyleBox" uid="uid://bd72p3342eql8" path="res://UI/DefPanel.tres" id="1_qw7eq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qw7eq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dc1w6"]
+outline_size = 10
+outline_color = Color(1, 0.827451, 0.309804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qinhu"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(360, 480)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_qw7eq")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="Button" type="Button" parent="Panel/MarginContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 48)
+layout_mode = 2
+text = "Accept
+"
+
+[node name="VSeparator" type="VSeparator" parent="Panel/MarginContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 48
+theme_override_styles/separator = SubResource("StyleBoxEmpty_qw7eq")
+
+[node name="Button2" type="Button" parent="Panel/MarginContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 48)
+layout_mode = 2
+text = "Deny
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="QuestName" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+text = "Quest Name"
+label_settings = SubResource("LabelSettings_dc1w6")
+
+[node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 96
+theme_override_styles/separator = SubResource("StyleBoxFlat_qinhu")
+
+[node name="Description" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 0.827451, 0.309804, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Quest Description
+
+"
+fit_content = true
+scroll_following = true
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 48
+theme_override_styles/separator = SubResource("StyleBoxFlat_qinhu")
+
+[node name="Requirements" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+text = "Requirements               X/10
+"
+label_settings = SubResource("LabelSettings_dc1w6")
+horizontal_alignment = 1

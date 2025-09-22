@@ -20,7 +20,6 @@ func _process(delta: float) -> void:
 		return
 	var progress = []
 	var status = ResourceLoader.load_threaded_get_status(path, progress)
-	print(status)
 	if status == ResourceLoader.ThreadLoadStatus.THREAD_LOAD_IN_PROGRESS:
 		progress_val = progress[0]*100
 		bar.value = move_toward(bar.value, progress_val, delta * 20)

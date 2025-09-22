@@ -6,8 +6,9 @@ class_name Dialogue
 @onready var _calc = get_node("PauseCalculator")
 @onready var dialog = Global.dialog_lst
 @onready var nametag = $MarginContainer/VBoxContainer/PanelContainer/Name
-
+var popup = false
 var speaking = false
+var next_message = 0
 var current_message = -1
 
 func _ready() -> void:
@@ -20,19 +21,31 @@ func _ready() -> void:
 	content.visible_characters = 0
 	
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("Interact"):
+	if Input.is_action_just_pressed("Interact") and !popup:
 		if !speaking and current_message == dialog.size() - 1:
 			get_parent().remove_child(self)
 			Global.EndDialogue()
 		else:
 			update_message()
-
+	if popup:
+		visible = false
+	else:
+		visible = true
+	if current_message < dialog.size():
+		next_message = current_message + 1 
+	else:
+		next_message = -1
+	
 func update_message():
+	if dialog[next_message] is Callable:
+		current_message += 1
+		dialog[current_message].call()
+		popup = true
+		
 	if speaking:
 		speaking = false
 		TypeTimer.stop()
 		content.visible_characters = content.text.length()
-
 	else:
 		speaking = true
 		current_message += 1

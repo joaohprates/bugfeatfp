@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlf16mr3i6ur8"]
+
+[ext_resource type="Script" uid="uid://bfqyypmppjnu0" path="res://UI/UI_Scripts/slot.gd" id="1_p5h00"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f3jfm"]
+bg_color = Color(0.27, 0.135, 0, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.94, 0.763437, 0.4794, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c24ra"]
+radius = 16.0
+
+[node name="Slot" type="Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchor_right = 0.056
+anchor_bottom = 0.099
+offset_right = -64.512
+offset_bottom = -64.152
+mouse_filter = 2
+mouse_force_pass_scroll_events = false
+script = ExtResource("1_p5h00")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+mouse_filter = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_f3jfm")
+
+[node name="Center" type="Area2D" parent="MarginContainer"]
+position = Vector2(32, 32)
+collision_layer = 64
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MarginContainer/Center"]
+shape = SubResource("CircleShape2D_c24ra")
+debug_color = Color(0, 0.643137, 0.329412, 0.419608)

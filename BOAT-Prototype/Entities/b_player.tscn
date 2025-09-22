@@ -6,6 +6,7 @@
 [ext_resource type="Shape2D" uid="uid://dfoxk0okaflqk" path="res://Entities/Hitbox_Barco.tres" id="4_n4l4i"]
 
 [node name="B_Player" type="CharacterBody2D"]
+collision_mask = 17
 script = ExtResource("1_jl4rr")
 max_speed = 100.0
 max_t_speed = 0.005
@@ -44,7 +45,13 @@ position = Vector2(-1, 15)
 shape = ExtResource("4_n4l4i")
 
 [node name="Hitbox" type="Area2D" parent="."]
+<<<<<<< Updated upstream
 collision_layer = 16
+=======
+visible = false
+collision_layer = 16
+collision_mask = 0
+>>>>>>> Stashed changes
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(-1, 15)
@@ -71,3 +78,19 @@ scale = Vector2(-1, -1)
 [node name="Left_Shoot3" type="Node2D" parent="."]
 position = Vector2(-115, -47)
 scale = Vector2(-1, -1)
+<<<<<<< Updated upstream
+=======
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+>>>>>>> Stashed changes

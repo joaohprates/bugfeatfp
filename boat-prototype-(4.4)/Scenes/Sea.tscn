@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://gw5jiwooiolq"]
+
+[ext_resource type="Script" uid="uid://ymgdglemnqbv" path="res://Scenes/Scenes_Scripts/sea.gd" id="1_g5o3i"]
+[ext_resource type="PackedScene" uid="uid://caogjt86juwxt" path="res://Entities/b_player.tscn" id="2_5a4dd"]
+[ext_resource type="PackedScene" uid="uid://c2ryntygpwkeo" path="res://Entities/Enemy.tscn" id="3_iio4m"]
+[ext_resource type="PackedScene" uid="uid://43hmgyj0lyfn" path="res://UI/pause.tscn" id="5_7kstw"]
+[ext_resource type="PackedScene" uid="uid://p2exkqem5ujy" path="res://Scenes/mar.tscn" id="5_22eiw"]
+[ext_resource type="PackedScene" uid="uid://bryanouw8otib" path="res://Scenes/porto.tscn" id="6_22eiw"]
+[ext_resource type="PackedScene" uid="uid://crrmhql0lrxns" path="res://Entities/item_box.tscn" id="7_a40w2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a40w2"]
+size = Vector2(2447, 33)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_g5o3i")
+
+[node name="B_Player" parent="." instance=ExtResource("2_5a4dd")]
+position = Vector2(549, 325)
+
+[node name="Enemy" parent="." instance=ExtResource("3_iio4m")]
+position = Vector2(-565, -91)
+
+[node name="mar" parent="." instance=ExtResource("5_22eiw")]
+z_index = -1
+
+[node name="Porto" parent="." instance=ExtResource("6_22eiw")]
+position = Vector2(1130, -153)
+
+[node name="Pause" parent="." instance=ExtResource("5_7kstw")]
+
+[node name="ItemBox" parent="." instance=ExtResource("7_a40w2")]
+position = Vector2(647, -114)
+
+[node name="ItemBox2" parent="." instance=ExtResource("7_a40w2")]
+position = Vector2(389, -33)
+
+[node name="ItemBox3" parent="." instance=ExtResource("7_a40w2")]
+position = Vector2(500, -195)
+
+[node name="ItemBox4" parent="." instance=ExtResource("7_a40w2")]
+position = Vector2(697, -463)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(566, -528)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(3, 1612)
+shape = SubResource("RectangleShape2D_a40w2")
+debug_color = Color(0, 0, 0, 0.419608)

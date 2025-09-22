@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cng1rb1wr8fwe"]
+
+[ext_resource type="Script" uid="uid://j3dv4yygcs5f" path="res://UI/UI Scripts/main.gd" id="1_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://dlf16mr3i6ur8" path="res://UI/slot.tscn" id="2_uu6xs"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_cm0pq")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 700.0
+offset_top = 38.0
+offset_right = 850.0
+offset_bottom = 356.0
+mouse_filter = 2
+mouse_force_pass_scroll_events = false
+
+[node name="Slot2" parent="." instance=ExtResource("2_uu6xs")]
+offset_left = 512.0
+offset_top = 42.0
+offset_right = 512.0
+offset_bottom = 42.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

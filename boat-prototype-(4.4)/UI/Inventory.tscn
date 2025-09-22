@@ -1,0 +1,201 @@
+[gd_scene load_steps=4 format=3 uid="uid://4ep7jkhgd38i"]
+
+[ext_resource type="PackedScene" uid="uid://dlf16mr3i6ur8" path="res://UI/slot.tscn" id="1_3n7vm"]
+[ext_resource type="Script" uid="uid://inpbw44raqfy" path="res://UI/UI_Scripts/inventory.gd" id="1_efu02"]
+[ext_resource type="StyleBox" uid="uid://bd72p3342eql8" path="res://UI/DefPanel.tres" id="2_2tckp"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_efu02")
+
+[node name="ItemSpawn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.351563
+anchor_top = 0.0817901
+anchor_right = 0.496076
+anchor_bottom = 0.199086
+offset_right = 0.520004
+offset_bottom = -0.00800323
+text = "Spawn Placeholder
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="ItemSpawn2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.351563
+anchor_top = 0.21142
+anchor_right = 0.496076
+anchor_bottom = 0.328716
+offset_right = 0.520004
+offset_bottom = -0.00800323
+text = "Spawn Other
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+custom_minimum_size = Vector2(384, 576)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 10
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Panel" type="Panel" parent="MarginContainer/ColorRect"]
+custom_minimum_size = Vector2(384, 576)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("2_2tckp")
+
+[node name="OuterGrid" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+mouse_filter = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/OuterGrid"]
+custom_minimum_size = Vector2(320, 448)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+mouse_filter = 2
+theme_override_constants/h_separation = 0
+columns = 5
+
+[node name="Slot" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot18" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot19" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot20" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot21" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot22" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot23" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot24" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot25" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot26" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot27" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot28" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot29" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot30" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot31" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot32" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot33" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot34" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot35" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot2" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot3" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot4" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot5" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot6" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot7" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot8" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot9" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot10" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot11" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot12" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot13" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot14" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot15" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot16" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2
+
+[node name="Slot17" parent="MarginContainer/OuterGrid/GridContainer" instance=ExtResource("1_3n7vm")]
+layout_mode = 2

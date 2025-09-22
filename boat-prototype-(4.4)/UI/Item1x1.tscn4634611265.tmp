@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://bypyaxunteeat"]
+
+[ext_resource type="Script" uid="uid://y8b401ko3khj" path="res://UI/UI Scripts/item_1x_1.gd" id="1_kvaiu"]
+[ext_resource type="Texture2D" uid="uid://g3xvdl0plb4i" path="res://icon.svg" id="1_rsfk0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0fw8m"]
+radius = 16.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yl3l7"]
+size = Vector2(64, 64)
+
+[sub_resource type="LabelSettings" id="LabelSettings_y3jdy"]
+font_color = Color(1, 0, 0, 1)
+
+[node name="ItemBlock" type="Node2D"]
+script = ExtResource("1_kvaiu")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_rsfk0")
+
+[node name="spot0" type="Area2D" parent="."]
+collision_layer = 128
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spot0"]
+shape = SubResource("CircleShape2D_0fw8m")
+debug_color = Color(0.523457, 0.573436, 0, 0.42)
+
+[node name="Click_Zone" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Click_Zone"]
+shape = SubResource("RectangleShape2D_yl3l7")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Counter" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 9.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "99"
+label_settings = SubResource("LabelSettings_y3jdy")
+horizontal_alignment = 2

@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://bob3vebhoe6xd"]
+
+[ext_resource type="LabelSettings" uid="uid://cu41ob57vexqo" path="res://UI/LabelSettings.tres" id="1_h7jbp"]
+
+[node name="Control" type="Control"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 22.0
+grow_horizontal = 2
+
+[node name="Instructions" type="Label" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "TEst "
+label_settings = ExtResource("1_h7jbp")
+
+[node name="TODO_DONE" type="Label" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(1, 0.827451, 0.30980393, 1)
+text = "0 / X"
+label_settings = ExtResource("1_h7jbp")
