@@ -1,21 +1,19 @@
 extends Boat
 
 @onready var helm
-@onready var HUD = get_node("CanvasLayer")
-@onready var UI = get_node("CanvasLayer/UI")
-
 var mkp
 var tgt = Vector2.ZERO
+var menu_is_open = false
 
 func _initialize_var():
 	speed = 0
 	max_speed = 100
-	accel = 0.75
+	accel = 0.5
 	deaccel = 0.75
-	t_speed = 0.005
+	t_speed = 0.00
 	max_t_speed = 0.005
 	t_accel = 0.0004
-	t_deaccel = 0.0002
+	t_deaccel = 0.00004
 	last_dir = 0
 	dir = Vector2.ZERO
 	isturn = false
@@ -27,16 +25,20 @@ func _initialize_var():
 
 func _ready():
 	Global.player_boat = self
+	Global.Tela_Boat = $CanvasLayer/UI
 	_initialize_var()
 	helm = get_node("Helm")
 	tgt = Vector2(global_position.x, global_position.y - 2)
+	Global.Tela_Boat.add_child(Global.inventory)
+	Global.Tela_Boat.call_deferred("remove_child", Global.inventory)
 	super()
-	
-	if get_tree().root.has_node("Main/CanvasLayer/UI"):
-		UI = get_tree().root.get_node("Main/CanvasLayer/UI")
 
 func _process(_delta: float) -> void:
 	Inputs()
+
+func _physics_process(delta: float) -> void:
+	super(delta)
+	move()
 
 func leftFire():
 	if not can_shoot_left:
@@ -79,6 +81,7 @@ func move():
 	move_and_slide()
 	helm.global_rotation = mkp.angle_to_point(tgt) + deg_to_rad(90)
 	if anchored:
+		
 		sail(0)
 		if t_speed > 0 :
 			t_speed -= t_deaccel
@@ -113,6 +116,15 @@ func Inputs():
 		rightFire()
 	if Input.is_action_just_pressed("LEFT_SHOOT"):
 		leftFire()
-	move()
+	if Input.is_action_just_pressed("menu"):
+		print('abriu')
+		if !menu_is_open:
+			menu_is_open = true
+			Global.Tela_Boat.add_child(Global.inventory)
+			
+		else:
+			Global.Tela_Boat.remove_child(Global.inventory)
+			menu_is_open = false
+	
 	
 	

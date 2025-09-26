@@ -51,7 +51,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.1, 0, 0.1, 0),
+"points": PackedFloat32Array(225, -0.1, 0, 0.1, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/2/type = "bezier"
@@ -120,7 +120,7 @@ metadata/_edit_lock_ = true
 
 [node name="SpeakerSprite" type="Sprite2D" parent="Speaker"]
 modulate = Color(0, 0.1, 1, 1)
-position = Vector2(122, 0)
+position = Vector2(122, 225)
 scale = Vector2(15, 15)
 texture = ExtResource("2_6co6m")
 

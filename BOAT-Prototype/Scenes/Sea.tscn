@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://gw5jiwooiolq"]
+[gd_scene load_steps=7 format=3 uid="uid://bi74a2d48pf5g"]
 
 [ext_resource type="Script" uid="uid://ymgdglemnqbv" path="res://Scenes/Scenes_Scripts/sea.gd" id="1_g5o3i"]
 [ext_resource type="PackedScene" uid="uid://caogjt86juwxt" path="res://Entities/b_player.tscn" id="2_5a4dd"]
 [ext_resource type="PackedScene" uid="uid://c2ryntygpwkeo" path="res://Entities/Enemy.tscn" id="3_iio4m"]
-[ext_resource type="PackedScene" uid="uid://43hmgyj0lyfn" path="res://UI/pause.tscn" id="5_7kstw"]
 [ext_resource type="PackedScene" uid="uid://p2exkqem5ujy" path="res://Scenes/mar.tscn" id="5_22eiw"]
 [ext_resource type="PackedScene" uid="uid://bryanouw8otib" path="res://Scenes/porto.tscn" id="6_22eiw"]
+[ext_resource type="PackedScene" uid="uid://crrmhql0lrxns" path="res://Entities/item_box.tscn" id="7_a40w2"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_g5o3i")
@@ -15,8 +15,6 @@ position = Vector2(549, 325)
 
 [node name="Enemy" parent="." instance=ExtResource("3_iio4m")]
 position = Vector2(140, -91)
-
-[node name="Pause" parent="." instance=ExtResource("5_7kstw")]
 
 [node name="mar" parent="." instance=ExtResource("5_22eiw")]
 z_index = -1
@@ -33,4 +31,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 metadata/_edit_lock_ = true
+
+[node name="ItemBox" parent="." instance=ExtResource("7_a40w2")]
+position = Vector2(593, -219)
+
+[node name="ItemBox2" parent="." instance=ExtResource("7_a40w2")]
+position = Vector2(818, -433)
+
+[node name="ItemBox3" parent="." instance=ExtResource("7_a40w2")]
+position = Vector2(492, -552)

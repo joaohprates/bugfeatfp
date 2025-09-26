@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bdfrwyvcg142u" path="res://Scenes/dialogue_manager.tscn" id="2_xebr5"]
 [ext_resource type="PackedScene" uid="uid://l142u5s52m26" path="res://Scenes/Terrain.tscn" id="3_uj218"]
 [ext_resource type="PackedScene" uid="uid://43hmgyj0lyfn" path="res://UI/pause.tscn" id="4_a2si3"]
-[ext_resource type="PackedScene" uid="uid://cf6snejajmt3q" path="res://UI/UI_Scripts/base_npc.tscn" id="6_7gm67"]
+[ext_resource type="PackedScene" path="res://Entities/base_npc.tscn" id="7_xebr5"]
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
@@ -30,5 +30,5 @@ script = null
 
 [node name="Pause" parent="." instance=ExtResource("4_a2si3")]
 
-[node name="BaseNPC" parent="." instance=ExtResource("6_7gm67")]
-position = Vector2(359.336, 242.53)
+[node name="BaseNPC" parent="." instance=ExtResource("7_xebr5")]
+position = Vector2(363.627, 241.43716)

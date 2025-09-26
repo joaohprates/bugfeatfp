@@ -23,6 +23,8 @@ var can_shoot_left = true
 var can_shoot_right = true
 var shoot_cooldown
 
+var push_force = 1
+
 @onready var cannonBall = preload("res://Entities/cannonBall.tscn")
 @onready var hitbox = $Hitbox
 
@@ -31,24 +33,26 @@ signal EntityDied
 func _ready() -> void:
 	hitbox.area_entered.connect(got_shot)
 	EntityDied.connect(got_killed)
-	print('asdfg')
 
-func sail(v : int):
-	'''
-	se *v* é 1, acelera o barco, se é 0, desacelera
-	'''
+func _physics_process(delta: float) -> void:
+	if move_and_collide(velocity * delta):
+		for i in get_slide_collision_count():
+			var c = get_slide_collision(i)
+			if c.get_collider() is RigidBody2D:
+				c.get_collider().apply_impulse(-c.get_normal() * push_force, c.get_position())
+				c.get_collider().apply_central_force(-c.get_normal() * speed * 5)
+
+## Se [param v] = 1, acelera o barco, se for -1, desacelera
+func sail(v : int) -> void:
 	if v == 1:
 		speed += accel
 	elif v == 0:
 		speed -= deaccel
 	speed = clamp(speed, 0, max_speed)
 	velocity = dir * speed
-	move_and_slide()
-	
+
+## Se [param l] é 1, gira o barco para a direita, se for -1 gira para a esquerda
 func _turn(l):
-	'''
-	se *l* é 1, gira o barco para a direita, se for -1 gira para a esquerda
-	'''
 	t_speed += t_accel
 	t_speed = clamp(t_speed, 0, max_t_speed)
 	rotate(t_speed * l)
@@ -72,5 +76,6 @@ func got_shot(area : Area2D):
 	hp -= 1
 	if hp <= 0:
 		emit_signal("EntityDied")
+
 func got_killed():
 	pass
