@@ -9,11 +9,11 @@ func _ready() -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	InRange = true
-	if Global.player_boat and Global.player_boat.UI:
+	if Global.player_boat and Global.Tela_Boat:
 		if atracar_instance == null:
 			atracar_instance = atracar_scene.instantiate()
 			atracar_instance.name = "AtracarUI"
-			Global.player_boat.UI.add_child(atracar_instance)
+			Global.Tela_Boat.add_child(atracar_instance)
 
 func _on_area_exit(area : Area2D) -> void:
 	InRange = false

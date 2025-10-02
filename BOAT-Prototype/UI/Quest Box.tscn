@@ -1,8 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bv5iqhnl2vvos"]
+[gd_scene load_steps=5 format=3 uid="uid://bv5iqhnl2vvos"]
 
-[ext_resource type="Script" uid="uid://d1ud7xl4ohu20" path="res://UI/quest_box.gd" id="1_dc1w6"]
-[ext_resource type="StyleBox" uid="uid://bd72p3342eql8" path="res://UI/DefPanel.tres" id="1_qw7eq"]
-[ext_resource type="LabelSettings" uid="uid://cu41ob57vexqo" path="res://UI/LabelSettings.tres" id="3_qinhu"]
+[ext_resource type="Script" uid="uid://d1ud7xl4ohu20" path="res://UI/UI_Scripts/quest_box.gd" id="1_dc1w6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qinhu"]
 
@@ -33,7 +31,6 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = ExtResource("1_qw7eq")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 1
@@ -58,7 +55,6 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 10
 text = "Quest Name"
-label_settings = ExtResource("3_qinhu")
 
 [node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2

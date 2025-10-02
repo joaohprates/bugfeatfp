@@ -19,7 +19,6 @@ func _process(delta: float) -> void:
 
 func _entered_zone(area : Area2D):
 	InRange = true
-	print('asdagsadgdartger')
 func _exited_zone(area : Area2D):
 	InRange = false
 func _on_interact():

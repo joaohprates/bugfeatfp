@@ -13,8 +13,15 @@ func _ready() -> void:
 	super()
 
 func _on_interact():
+	if dials.quests['first'].done and !dials.quests['first'].completed:
+		fala = dials.falas['first_comp']
+		dials.quests['first'].completed = true
+	elif dials.quests['first'].completed:
+		fala = dials.falas['test']
+	elif !dials.quests['first'].done and dials.quests['first'].active :
+		fala = dials.falas['first_acc']
 	if Global.player.active == true:
-		Global.StartDialogue(fala, nome)
+		Global.StartDialogue(fala.duplicate(), nome)
 		Global.player.active = false
 
 func change_line(line : Array):

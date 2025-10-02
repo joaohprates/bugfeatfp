@@ -26,8 +26,9 @@ func inv_check():
 
 ## Marca [param quest] como entregue e a remoe da lista de quests ativas
 func finish_quest(quest : Quest):
-	quest.delivered = true
+	quest.completed = true
 	active_quests.erase(quest)
+	print('reward given')
 
 func quest_pop_up(quest : Quest):
 	print(quest)

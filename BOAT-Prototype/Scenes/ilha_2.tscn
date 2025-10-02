@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b0ruar5bhgln" path="res://Entities/Player.tscn" id="3_574tf"]
 [ext_resource type="PackedScene" uid="uid://l142u5s52m26" path="res://Scenes/Terrain.tscn" id="4_e0dug"]
 [ext_resource type="PackedScene" uid="uid://43hmgyj0lyfn" path="res://UI/pause.tscn" id="5_pbb6d"]
-[ext_resource type="PackedScene" uid="uid://cf6snejajmt3q" path="res://UI/UI_Scripts/base_npc.tscn" id="6_mavue"]
+[ext_resource type="PackedScene" uid="uid://caf50eb0ykklk" path="res://Entities/base_npc.tscn" id="6_rmfsu"]
 
 [node name="Ilha2" type="Node2D"]
 
@@ -28,9 +28,9 @@ metadata/_edit_lock_ = true
 [node name="Pause" parent="." instance=ExtResource("5_pbb6d")]
 visible = false
 
-[node name="BaseNPC" parent="." instance=ExtResource("6_mavue")]
-position = Vector2(697, -166)
-
 [node name="Totem2" parent="." instance=ExtResource("2_vw2tf")]
 z_index = 1
 position = Vector2(494, -213)
+
+[node name="BaseNPC" parent="." instance=ExtResource("6_rmfsu")]
+position = Vector2(578, -218)

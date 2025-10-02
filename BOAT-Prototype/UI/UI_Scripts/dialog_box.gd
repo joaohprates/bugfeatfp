@@ -4,7 +4,7 @@ class_name Dialogue
 @onready var content = get_node("MarginContainer/VBoxContainer/Panel/MarginContainer/Content")
 @onready var TypeTimer = get_node("TypeTimer")
 @onready var _calc = get_node("PauseCalculator")
-@onready var dialog = Global.dialog_lst
+@onready var dialog = ['']
 @onready var nametag = $MarginContainer/VBoxContainer/PanelContainer/Name
 var popup = false
 var speaking = false
@@ -12,7 +12,6 @@ var next_message = 0
 var current_message = -1
 
 func _ready() -> void:
-	print(nametag)
 	nametag.text = Global.emit_name
 	Global.dialog_box = self
 	$PauseCalculator.pause_requested.connect(_on_pause_requested)
@@ -31,18 +30,17 @@ func _process(delta: float) -> void:
 		visible = false
 	else:
 		visible = true
-	if current_message < dialog.size():
-		next_message = current_message + 1 
-	else:
-		next_message = -1
 	
 func update_message():
-	if dialog[next_message] is Callable:
+	if current_message != dialog.size() - 1:
+		next_message = current_message + 1 
+	else:
+		next_message = null
+	if next_message != null and dialog[next_message] is Callable:
 		current_message += 1
 		dialog[current_message].call()
 		popup = true
-		
-	if speaking:
+	elif speaking:
 		speaking = false
 		TypeTimer.stop()
 		content.visible_characters = content.text.length()

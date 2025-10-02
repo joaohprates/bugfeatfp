@@ -16,8 +16,9 @@ var f_quest = Quest.new('Test Quest', 'This is a test quest, you have to pick up
 	'greet' : ['Hello!{p=0.4} my name is [rainbow]John Godot[/rainbow] {p=0.4},nice to meet you!',
 		'This island is very small and very[shake] lonely[/shake]{p=0.2}.{p=0.2}.{p=0.2}. I`m glad i have a [wave]friend[/wave] now!',
 		'So{p=0.5} I need you to do this quest for me,{p=0.5} I will give you [rainbow]two shawarmas and a Sprite![/rainbow]',
-		Callable(QuestManager, 'quest_pop_up').bind(quests['first']), 'thank u'],
-	'first_accept' : ['Thank you']
+		Callable(QuestManager, 'quest_pop_up').bind(quests['first'])],
+	'first_comp' : ['Thank you', 'Here is your reward', Callable(QuestManager, 'finish_quest').bind(quests['first'])],
+	'first_acc' : ['go do my quest, asshole']
 	}
 
 # QUESTS ----------------------------------------------------------------------

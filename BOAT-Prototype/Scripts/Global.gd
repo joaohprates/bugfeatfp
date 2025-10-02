@@ -23,15 +23,14 @@ func mudar_cena(path):
 
 var dialog_manager
 var dialog_box = preload("res://UI/dialog_box.tscn").instantiate()
-var dialog_lst = ['']
 var emit_name = ''
 
 ## Inicia um dialogo com as falas de [param dialogue] sob o nome [param emitter]
 func StartDialogue(dialogue : Array, emitter : String):
 	print('Dialogue Started')
-	dialog_lst = dialogue.duplicate()
 	emit_name = emitter
 	player.UI.add_child(dialog_box)
+	dialog_box.dialog = dialogue.duplicate()
 	dialog_box.update_message()
 
 ## Finaliza o dialogo atual

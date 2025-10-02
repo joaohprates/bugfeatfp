@@ -25,14 +25,18 @@ func _update():
 func quest_accept():
 	Global.dialog_box.popup = false
 	QuestManager.start_quest(quest)
-	if Global.dialog_box.current_message != Global.dialog_box.dialog.size() - 1:
-		Global.dialog_box.update_message()
+	#if Global.dialog_box.current_message != Global.dialog_box.dialog.size() - 1:
+	Global.dialog_box.update_message()
+	Global.dialog_box.dialog.append(quest.acc_text)
+	Global.dialog_box.update_message()
 	get_parent().remove_child(self)
 	
 
 func quest_deny():
 	Global.dialog_box.popup = false
-	if Global.dialog_box.current_message != Global.dialog_box.dialog.size() - 1:
-		Global.dialog_box.update_message()
+	#if Global.dialog_box.current_message != Global.dialog_box.dialog.size() - 1:
+	Global.dialog_box.update_message()
+	Global.dialog_box.dialog.append(quest.deny_text)
+	Global.dialog_box.update_message()
 	get_parent().remove_child(self)
 	
